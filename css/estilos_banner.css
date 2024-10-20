@@ -1,0 +1,168 @@
+@import url(estilos_nav.css);
+@import url(modal.css);
+@import url(botones.css);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Fondo_delsoft.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  
+}
+
+.content {
+    width: 100%;
+    position:fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-top: 80px;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+@media (max-width: 1000px) {
+    nav ul li a {
+      font-size: 16px;
+    }
+
+    nav h1{
+        font-size: 40px;
+    }
+  }
+  
+  
+  
+  
+  @media (max-width: 870px) {
+    .checkbtn {
+      display: block;
+  
+    }
+
+    .banner {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Fondo_delsoft.jpeg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 60em;
+    
+  }
+  .content h1 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.content p {
+  margin: 20px auto;
+  font-weight: 50;
+  line-height: 20px;
+  font-size: 15px;
+}
+  
+    .menu {
+      position: fixed;
+      width: 100%;
+      height: 150vh;
+      background: #333;
+      top: 140px;
+      left: 100%;
+      text-align: center;
+      transition: all .5s;
+  
+    }
+  
+    nav ul li {
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+  
+    }
+  
+    nav ul li a {
+      font-size: 20px;
+      color: #f5f5f5;
+    }
+  
+    li a:hover,
+    li a .active {
+      background: none;
+      color: rgb(84, 15, 212);
+    }
+  
+    #check:checked~ul {
+      left: 0;
+    }
+    
+    .content{
+        position: relative; /* Ajustar el posicionamiento para que se vea correctamente */
+        display: block;
+        top: auto;
+        transform: none; /* Evitar la transformación vertical en móviles */
+        margin-top: 100px; /* Espacio para que el menú no tape el contenido */
+    }
+
+  }
+  
+  @media (max-width: 768px) {
+    .content h1 {
+        font-size: 40px; /* Reducimos el tamaño del título en tablets */
+    }
+
+    .content p {
+        font-size: 18px; /* Ajustamos el tamaño del párrafo en tablets */
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 30px; /* Reducimos más el tamaño del título en móviles */
+        margin-top: 40px; /* Ajustamos el margen superior */
+    }
+
+    .content p {
+        font-size: 16px; /* Reducimos el tamaño del párrafo en móviles */
+        line-height: 20px;
+    }
+
+    .banner {
+        height: 100%; /* Hacemos que el banner ocupe toda la pantalla de alto */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Fondo_delsoft.jpeg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 60em;
+    }
+}

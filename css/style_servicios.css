@@ -1,0 +1,271 @@
+/* Estilos generales */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container1 {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  display: inline-block;
+}
+
+header img {
+  width: 10%;
+  height: 10%;
+  margin-left: 10px;
+  border-radius: 35px;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #34495e;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #27ae60;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-close {
+  background-color: #e74c3c;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  display: none;
+}
+
+.btn:hover,
+.btn-close:hover {
+  background-color: #219452;
+}
+
+/* Estilos para el acordeón de preguntas frecuentes (sin cambios) */
+.accordion-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.accordion-title {
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.accordion-content {
+  padding: 10px;
+  display: none;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Estilos para el formulario de contacto */
+form {
+  padding: 20px 55px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  text-align: center;
+  width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+h2 {
+  color: #283629;
+  font-size: 35px;
+}
+
+label {
+  color: #283629;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  padding: 17px 25px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  background-color: #EDFFF0;
+  border: 2px solid #F0FAF1;
+  color: #283629;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #b5cab6;
+}
+
+.form-txt {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.form-txt a {
+  color: #76b28e;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.bnt {
+  font-size: 16px;
+  color: #ffff;
+  border: 0;
+  border-radius: 25px;
+  background-color: #51D94C;
+  box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
+}
+
+.btn:hover {
+  background-color: #50E04B;
+}
+
+/* Media Queries para hacer la página responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  header img {
+    width: 15%;
+    height: 15%;
+  }
+
+  nav li {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  form {
+    width: 90%; /* Hacer que el formulario ocupe más espacio en pantallas pequeñas */
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input, textarea {
+    padding: 12px 20px; /* Reducir el padding en dispositivos móviles */
+    font-size: 16px;
+  }
+
+  .input-group {
+    margin-bottom: 15px;
+  }
+
+  .form-txt {
+    flex-direction: column; /* Alinear enlaces uno debajo del otro en móviles */
+    text-align: center;
+  }
+
+  .form-txt a {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 28px; /* Reducir el tamaño de las cabeceras en pantallas pequeñas */
+  }
+
+  .btn, .btn-close {
+    padding: 8px 15px; /* Reducir tamaño de botones en pantallas pequeñas */
+    font-size: 14px;
+  }
+}
+
+.container1{
+  text-align: center;
+}
+
+@media(max-width:991px) {
+
+
+  form {
+    padding: 50px 30px;
+    width: 90%;
+    margin-left: -5px;
+  }
+
+  input {
+    padding: 15px;
+  }
+
+  .container1{
+    text-align: center;
+  }
+}

@@ -1,0 +1,56 @@
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 2px solid #390096;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #390096;
+    height: 100%;
+    width: 0;
+    border-radius: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    button {
+        width: 160px; /* Reducimos el ancho del botón en pantallas medianas */
+        padding: 12px 0; /* Ajustamos el padding para que sea proporcional */
+        font-size: 0.9rem; /* Reducimos el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        width: 140px; /* Reducimos más el ancho en pantallas pequeñas */
+        padding: 10px 0; /* Menos padding en dispositivos pequeños */
+        margin: 15px 5px; /* Ajustamos el margen */
+        font-size: 0.8rem; /* Fuente más pequeña para pantallas móviles */
+    }
+
+    span {
+        border-radius: 15px; /* Reducimos el borde redondeado para pantallas pequeñas */
+    }
+}

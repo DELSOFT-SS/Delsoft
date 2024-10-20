@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión / Registrarse</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #6cc0ff, #73e3a1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.form-area {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: grid;
+    gap: 10px;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+.tabs button {
+    padding: 10px;
+    background-color: #d5b5d6;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tabs button.active {
+    background-color: #eaeaea;
+}
+
+form.form {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    gap: 10px;
+}
+
+.options a {
+    text-align: right;
+    color: #333;
+    text-decoration: none;
+}
+
+.btn {
+    padding: 10px;
+    background-color: #61d3ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #48b8e6;
+}
+
+.signup-text {
+    text-align: center;
+    font-size: 14px;
+}
+
+.signup-text .link {
+    color: #333;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Form Area -->
+        <div class="form-area">
+            <div class="tabs">
+                <button id="login-tab" class="active" onclick="showLogin()">Iniciar Sesión</button>
+                <button id="register-tab" onclick="showRegister()">Registrarse</button>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form" class="form">
+               
+                <input type="text" placeholder="Usuario" required>
+                <input type="password" placeholder="Contraseña" required>
+                <div class="options">
+                    <label>
+                        <input type="checkbox"> Recuérdame
+                    </label>
+                    <a href="#">¿Olvidaste tu contraseña?</a>
+
+                </div>
+                <button type="submit" class="btn">Ingresa</button>
+                <p class="signup-text">¿No tienes una cuenta? <span onclick="showRegister()" class="link">Crea una.</span></p>
+                <p class="signup-text">Volver al <a href="index.html">Inicio</a></p>
+            </form>
+
+            <!-- Registration Form -->
+            <form id="register-form" class="form" style="display: none;">
+              
+                <input type="text" placeholder="Usuario" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="password" placeholder="Contraseña" required>
+                <input type="password" placeholder="Confirma tu Contraseña" required>
+                <button type="submit" class="btn">Regístrate</button>
+                <p class="signup-text">¿Ya tienes una cuenta? <span onclick="showLogin()" class="link">Inicia sesión.</span></p>
+                <p class="signup-text">Volver al <a href="index.html">Inicio</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showLogin() {
+            document.getElementById('login-form').style.display = 'grid';
+            document.getElementById('register-form').style.display = 'none';
+            document.getElementById('login-tab').classList.add('active');
+            document.getElementById('register-tab').classList.remove('active');
+        }
+
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'grid';
+            document.getElementById('login-tab').classList.remove('active');
+            document.getElementById('register-tab').classList.add('active');
+        }
+    </script>
+</body>
+</html>
